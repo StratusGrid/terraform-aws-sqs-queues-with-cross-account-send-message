@@ -1,10 +1,8 @@
 resource "aws_sqs_queue" "queue" {
   name = "${var.queue_name}"
   redrive_policy = "${var.redrive_policy}"
-  tags = "${merge(var.input_tags,
-    map(
-    )
-  )}"
+  tags = "${merge(local.common_tags,
+    tomap({}))}"
 }
 
 data "aws_iam_policy_document" "policy" {
