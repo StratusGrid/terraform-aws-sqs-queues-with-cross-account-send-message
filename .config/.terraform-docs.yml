@@ -1,0 +1,44 @@
+version: ""
+
+formatter: markdown table
+
+name:  terraform-aws-sqs-queues-with-cross-account-send-message
+
+content: |-
+  # terraform-aws-sqs-queues-with-cross-account-send-message
+
+  GitHub: [StratusGrid/terraform-aws-sqs-queues-with-cross-account-send-message](https://github.com/StratusGrid/terraform-aws-sqs-queues-with-cross-account-send-message)
+
+  This module allows the creation of a queue which will allow messages to be sent to the queue from a list of IAM Principals. Generally used to add permissions to the SQS queue for other AWS accounts to submit messages. 
+  
+  ## Example Usage:
+  ```hcl
+  {{ include "examples/example1.tfnot" }}
+  ```
+  ---
+
+  {{ .Resources }}
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}
+
+  ---
+
+  <span style="color:red">Note:</span> Manual changes to the README will be overwritten when the documentation is updated. To update the documentation, run `terraform-docs -c .config/.terraform-docs.yml .`
+
+sections:
+  show:
+    - resources
+    - inputs
+    - outputs
+    - providers
+    - requirements
+
+sort:
+  enabled: true
+  by: name
+
+output:
+  file: README.md
+  mode: replace
